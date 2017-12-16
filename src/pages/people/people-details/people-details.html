@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ person.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      {{ person.height }}
+      {{ person.mass }}
+      {{ person.hair_color }}
+      {{ person.skin_color }}
+      {{ person.eye_color }}
+      {{ person.birth_year }}
+      {{ person.gender }}
+      <ion-list *ngFor="let film of person.films">
+          <ion-item>
+              {{ film }}
+          </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

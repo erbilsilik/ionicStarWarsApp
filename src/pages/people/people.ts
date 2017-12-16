@@ -1,14 +1,7 @@
-import { Observable } from 'rxjs/Observable';
-import { HttpClient } from '@angular/common/http';
+import { ApiProvider } from './../../providers/api/api';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PeoplePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -18,13 +11,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class PeoplePage {
   people: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
-    this.people = this.httpClient.get('http://swapi.co/api/people');
-
+  constructor(public navCtrl: NavController, public apiProvider: ApiProvider) {
+    this.people = this.apiProvider.getPeople();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PeoplePage');
+  openDetails(person) {
+    this.navCtrl.push('PeopleDetailsPage', {person: person});
   }
-
 }
