@@ -1,18 +1,21 @@
-<!--
-  Generated template for the PlanetDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>planetDetails</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>{{ planet.name }}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-card>
+    <ion-card-content>
+        <h1 ion-text color="dark">PLANET</h1> <br>
+      <p ion-text color="primary">Name: <span ion-text color="dark">{{ planet.name }}</span></p>
+      <p ion-text color="primary">Mass: <span ion-text color="dark">{{ planet.rotation_period }}</span></p>
+      <p ion-text color="primary">Orbital Period: <span ion-text color="dark">{{ planet.orbital_period }}</span></p>
+      <p ion-text color="primary">Gravity: <span ion-text color="dark">{{ planet.gravity }}</span></p>
+      <p ion-text color="primary">Climate: <span ion-text color="dark">{{ planet.climate }}</span></p>
+      <p ion-text color="primary">Terrain: <span ion-text color="dark">{{ planet.terrain }}</span></p>
+      <p ion-text color="primary">Surface Water: <span ion-text color="dark">{{ planet.surface_water }}</span></p>
+      <p ion-text color="primary">Population: <span ion-text color="dark">{{ planet.population }}</span></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

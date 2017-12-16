@@ -7,18 +7,14 @@
 <ion-content padding>
   <ion-card>
     <ion-card-content>
-      {{ person.height }}
-      {{ person.mass }}
-      {{ person.hair_color }}
-      {{ person.skin_color }}
-      {{ person.eye_color }}
-      {{ person.birth_year }}
-      {{ person.gender }}
-      <ion-list *ngFor="let film of person.films">
-          <ion-item>
-              {{ film }}
-          </ion-item>
-      </ion-list>
+      <h1 ion-text color="dark">PERSON</h1> <br>
+      <p ion-text color="primary">Name: <span ion-text color="dark">{{ person.name }}</span></p>
+      <p ion-text color="primary">Birth Year: <span ion-text color="dark">{{  person.birth_year  }}</span></p>
+      <p ion-text color="primary">Gender: <span ion-text color="dark">{{  person.gender }}</span></p>
+      <p ion-text color="primary">Mass: <span ion-text color="dark">{{ person.mass }}</span></p>
+      <p ion-text color="primary">Hair Color: <span ion-text color="dark">{{ person.hair_color }}</span></p>
+      <p ion-text color="primary">Skin Color: <span ion-text color="dark">{{ person.skin_color }}</span></p>
+      <p ion-text color="primary">Eye Color: <span ion-text color="dark">{{ person.eye_color  }}</span></p>
     </ion-card-content>
   </ion-card>
 </ion-content>
